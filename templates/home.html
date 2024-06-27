@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block seo %}
+<meta name="description" content="Home page description">
+<meta name="keywords" content="home, blog">
+{% endblock %}
+
+{% block blog_title %}The good food blogs{% endblock %}
+
+{% block hide_date %}{% endblock %}
+
+{% block blog %}
+    <div class="posts">
+        {% for post in posts %}
+            <div class="post_item">
+                <a class="title" href="{{ post.url }}">{{ post.title }}</a>
+                <p class="date">{{ post.date }}</p>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

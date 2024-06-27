@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: sans-serif;
+    padding-top: 5rem;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 120vh;
+}
+
+// Navbar styles
+.navbar{
+    padding: 1rem 1rem 0rem 1rem;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    width: calc(100vw - 2rem);
+
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 2px solid black;
+        padding: 1rem;
+    
+        .logo{
+            font-weight: bold;
+            font-size: 1.5rem;
+
+            a{
+                color: black;
+                text-decoration: none;
+            }
+        }
+    
+        .items{
+            display: flex;
+            gap: 1rem;
+    
+            a{
+                color: black;
+                text-decoration: none;
+    
+                &:hover{
+                    text-decoration: underline double;
+                }
+            }
+        }
+    }
+}
+
+// main blog styles
+.container{
+    display: flex;
+    justify-content: center;
+
+    .blog{
+        width: 100%;
+        max-width: 600px;
+        margin-top: 2rem;
+        padding: 1rem;
+
+        // home page style
+        .posts{
+            margin-top: 2rem;
+
+            .post_item{
+                margin-bottom: 1.5rem;
+
+                .title{
+                    font-size: 2rem;
+                    text-decoration: none;
+                    color: black;
+
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+
+                .date{
+                    margin-top: 0.5rem;
+                    opacity: 0.6;
+                }
+            }
+        }
+
+        // blog page styles
+        h1.title{
+            font-size: 3rem;
+        }
+
+        p.date{
+            margin-top: 0.5rem;
+            opacity: 0.6;
+        }
+
+        .content{
+            margin-top: 2rem;
+        }
+    }
+}
+
+.footer{
+    background: #f5f5f5;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    margin-top: 5rem;
+    border-top: 2px solid black;
+
+    .logo{
+        color: black;
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .links{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 0.5rem;
+
+        a{
+            color: black;
+            text-decoration: none;
+
+            &:hover{
+                text-decoration: underline double;
+            }
+        }
+    }
+}
+
+// mobile styes
+@media screen and (max-width: 800px) {
+    .navbar{
+        nav{
+            .items{
+                display: none;
+            }
+        }
+    }
+
+    .footer{
+        flex-direction: column;
+        gap: 2rem;
+    }
+}

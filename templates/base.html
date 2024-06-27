@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{% block title %}{% endblock %}</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/main.css">
+
+    <!-- Global SEO Tags -->
+    <meta name="description" content="Your global description here">
+    <meta name="keywords" content="global, keywords, here">
+
+    <!-- Per page SEO -->
+    {% block seo %}{% endblock %}
+</head>
+<body>
+    <div class="navbar">
+        <nav>
+            <div class="logo">
+                <a href="/">the good food project</a>
+            </div>
+
+            <div class="items">
+                <a href="/contact.html">Contact</a>
+                <a href="/about.html">About</a>
+            </div>
+        </nav>
+    </div>
+
+    <div class="main">
+        <div class="container">
+            <div class="blog">
+                <h1 class="title">{% block blog_title %}{% endblock %}</h1>
+    
+                {% block hide_date %}
+                    <p class="date">🗓️ &nbsp;{% block blog_date %}{% endblock %}</p>
+                {% endblock %}
+        
+                {% block blog_image %}{% endblock %}
+        
+                <div class="content">
+                    {% block blog %}
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+    
+        <div class="footer">
+            <a href="/" class="logo">the good food project</a>
+    
+            <div class="links">
+                <a href="/sitemap.xml">Sitemap</a>
+                <a href="/contact.html">Contact</a>
+                <a href="/about.html">About</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -90,6 +90,97 @@ body {
 .container .blog .content {
   margin-top: 2rem;
 }
+.container .blog .content * {
+  line-height: 150%;
+  font-size: 1.1rem;
+}
+.container .blog .content details {
+  margin-bottom: 1rem;
+}
+.container .blog .content details summary {
+  cursor: pointer;
+}
+.container .blog .content details summary:hover {
+  -webkit-text-decoration: double underline;
+          text-decoration: double underline;
+}
+.container .blog .content details ol {
+  margin: 0.5rem 0 0 2rem;
+}
+.container .blog .content details ol li {
+  margin-bottom: 0.2rem;
+}
+.container .blog .content .blog_content {
+  display: flex;
+  flex-direction: column;
+}
+.container .blog .content a {
+  color: #180ea4;
+  text-decoration: none;
+}
+.container .blog .content a:hover {
+  text-decoration: underline;
+}
+.container .blog .content a[target=_blank] {
+  cursor: alias;
+}
+.container .blog .content p {
+  margin-bottom: 1rem;
+}
+.container .blog .content h2 {
+  font-size: 1.5rem;
+}
+.container .blog .content h1 {
+  font-size: 2rem;
+}
+.container .blog .content img {
+  width: 100%;
+}
+.container .blog .content img:has(+ p),
+.container .blog .content img:has(+ h1),
+.container .blog .content img:has(+ h2),
+.container .blog .content img:has(+ h3) {
+  margin-bottom: 1rem;
+}
+.container .blog .content ul, .container .blog .content ol {
+  padding-left: 1.1rem;
+}
+.container .blog .content ul li, .container .blog .content ol li {
+  margin-bottom: 0.5rem;
+}
+.container .blog .content em {
+  text-decoration: underline;
+}
+.container .blog .content abbr {
+  cursor: context-menu;
+}
+.container .blog .content table {
+  border: 2px solid black;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+.container .blog .content table * {
+  font-size: 1rem;
+}
+.container .blog .content table th {
+  text-align: left;
+  font-weight: bold;
+  padding: 0.5rem;
+  border-bottom: 1px solid black;
+  background: #f5f5f5;
+}
+.container .blog .content table td {
+  padding: 0.5rem;
+}
+.container .blog .content table tr:hover {
+  background: #f5f5f5;
+}
+.container .blog .content table tr.emphasize {
+  background: #abf5c1;
+}
+.container .blog .content table tr.emphasize td {
+  font-weight: bold;
+}
 
 .footer {
   background: #f5f5f5;
@@ -127,5 +218,8 @@ body {
   .footer {
     flex-direction: column;
     gap: 2rem;
+  }
+  .footer .links {
+    align-items: flex-start;
   }
 }/*# sourceMappingURL=main.css.map */

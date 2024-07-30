@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+{% block title %}Should we stop eating rice? – The Good Food Project{% endblock %}
+
+{% block seo %}
+<!-- Description -->
+<meta name="description" content="Description for Should we stop eating rice?">
+<meta name="keywords" content="should, we, stop, eating, rice?">
+
+<!-- Open Graph Tags -->
+<meta property="og:title" content="White rice has high GI and brown rice has high Arsenic. Should we stop eating rice? – The Good Food Project">
+<meta property="og:description" content="Description for Should we stop eating rice?">
+<meta property="og:image" content="/static/images/should-we-stop-eating-rice/link-share-thumbnail.webp">
+
+<!-- Twitter Card Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="White rice has high GI and brown rice has high Arsenic. Should we stop eating rice? – The Good Food Project">
+<meta name="twitter:description" content="Description for Should we stop eating rice?">
+<meta name="twitter:image" content="/static/images/should-we-stop-eating-rice/link-share-thumbnail.webp">
+{% endblock %}
+
+{% block blog_title %}White rice has high GI and brown rice has high Arsenic. Should we stop eating rice?{% endblock %}
+{% block blog_date %}28 July, 2024{% endblock %}
+
+{% block blog %}
+<!-- Sources -->
+<details>
+    <summary>Sources</summary>
+    <ol>
+        <li><a href="https://www.healthline.com/nutrition/brown-vs-white-rice#bottom-line">Nutritional content in brown vs white rice</a></li>
+        <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10375490/">Research on Arsenic in brown rice</a></li>
+        <li><a href="https://onedegreeorganics.com/inorganic-arsenic-and-rice-a-global-problem-with-a-surprising-solution/">How arsenic gets into rice</a></li>
+        <li><a href="https://www.researchgate.net/publication/330073587_Impact_of_Alternate_Wetting_and_Drying_Irrigation_on_Arsenic_Uptake_and_Speciation_in_Flooded_Rice_Systems">Research on irrigation style and its effect on rice arsenic content</a></li>
+        <li><a href="https://www.wikiwand.com/en/Glycemic_index">Wikipedia article on Glycemic Index</a></li>
+        <li><a href="https://pubmed.ncbi.nlm.nih.gov/19137137/">Cooking rice in a high water to rice ratio reduces inorganic arsenic content</a></li>
+    </ol>
+</details>
+
+<!-- Blog Content -->
+<div class="blog_content">
+    <h3>Short Answer:</h3>
+    <p><em>
+        Avoid white rice because high glycemic index is detrimental to health. As for brown rice, there are 2 practical ways of making it safer:
+        <ol>
+            <li>Cook rice in at least 6:1 water to rice ratio and drain the remaining water after rice softens.</li>
+            <li>Buy brown rice that was grown without flooding the farms.</li>
+        </ol>
+    </em></p>
+    <h3>Why does rice contain Arsenic?</h3>
+    <p>This is thanks to both the rice plant and the environment it is grown in. Arsenic is chemically very similar to phosphorous and silicon which are both needed by plants to grow and the plant doesn't know if its absorbing silicon or arsenic. This problem is not unique to rice, but that's where rice's another feature shines: Rice has special roots which helps it thrive in flooded water.</p>
+    <p>Rice farms are flooded because like most other plants, weeds cannot grow in flooded fields. It's a natural and cost effective weed killer. What happens now in this flooded field is called as a Redox Reaction where the arsenic that was insoluble in water converts into a form that can be dissolved in water which is absorbed by plants and is chemically very similar to silicon and the poor rice plant mistakenly absorbs it!</p>
+    <p>Just like for humans, Arsenic is not good for rice either. For this, rice plant has developed ways to trap arsenic inside other compounds in a process called Chelation. This protects the rice plant from the arsenic it absorbs but when we cook the rice, these traps are broken and arsenic becomes available for our body to absorb it thinking it is silicon.</p>
+    <h3>What can be done?</h3>
+    <p>When we normally cook rice in 2-2.5 parts water and 1 part rice, all water is absorbed by rice, rice softens and is delicious to eat. If we now add 7 part water to 1 part rice and cook it, not all water will be absorbed by the rice. The remaining water will have dissolved arsenic in it! You can now drain that water and be left with cooked rice that has lower Arsenic amounts!</p>
+    <p>Higher the water to rice ratio, more the amount of arsenic dissolved water that can be drained away and lower the amount of arsenic your cooked rice will have. The only downside, it will take longer to cook.</p>
+    <p>Research has shown that having a 6:1 water to rice ratio decreases the arsenic amount by half!</p>
+    <h3>A case for better grown rice</h3>
+    <p>For thousands of years, alongside flooded fields have been communities who grow rice in naturally rainfed and non-flooded fields. Some of those communities still exist and have been providing us with rice that is not only rich in nutrients but also has lesser arsenic in rice grains themselves.</p>
+    <p>Since it requires more intensive labor and hand pulling weeds, the cost of such rice tends to be the higher end. I'll include some of the brands that offer good quality low-arsenic rice (not an exhaustive list).</p>
+    <ul>
+        <li><a href="https://siddhannam.com/">Siddha Annam</a> <i>I know the founders personally and have visited their farms myself. Highly driven people. I think they do awesome work!</i></li>
+        <li><a href="https://www.lundberg.com/">Lundberg</a></li>
+        <li><a href="https://www.lotusfoods.com/collections/rice">Lotus Foods</a></li>
+    </ul>
+    <p>With all this information, you are equipped with all the knowledge need to safely defuse the bomb called rice and enjoy a tasty meal!</p>
+    <p><b>Stay healthful! See you on another Good Food blog.</b></p>
+</div>
+
+<!-- Blog Info for search engines -->
+<script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Article",
+      "headline": "White rice has high GI and brown rice has high Arsenic. Should we stop eating rice? – The Good Food Project",
+      "image": "/static/images/should-we-stop-eating-rice/link-share-thumbnail.webp",
+      "author": "Your Name",
+      "publisher": {
+        "@type": "Organization",
+        "name": "The Good Food Project",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "/logo.png"
+        }
+      },
+      "datePublished": "2024-07-28"
+    }
+</script>    
+{% endblock %}

@@ -33,13 +33,13 @@ def create_post(title):
 <!-- Open Graph Tags -->
 <meta property="og:title" content="{title} – The Good Food Project">
 <meta property="og:description" content="Description for {title}">
-<meta property="og:image" content="/static/images/{post_slug}/link-share-thumbnail.webp">
+<meta property="og:image" content="/static/images/{post_slug}/link-share-thumbnail.jpg">
 
 <!-- Twitter Card Tags -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{title} – The Good Food Project">
 <meta name="twitter:description" content="Description for {title}">
-<meta name="twitter:image" content="/static/images/{post_slug}/link-share-thumbnail.webp">
+<meta name="twitter:image" content="/static/images/{post_slug}/link-share-thumbnail.jpg">
 {{% endblock %}}
 
 {{% block blog_title %}}{title}{{% endblock %}}
@@ -69,7 +69,7 @@ def create_post(title):
       "@context": "http://schema.org",
       "@type": "Article",
       "headline": "{title} – The Good Food Project",
-      "image": "/static/images/{post_slug}/link-share-thumbnail.webp",
+      "image": "/static/images/{post_slug}/link-share-thumbnail.jpg",
       "author": "Your Name",
       "publisher": {{
         "@type": "Organization",

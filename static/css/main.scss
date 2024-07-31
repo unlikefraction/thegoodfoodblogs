@@ -1,14 +1,14 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-body{
+body {
     font-family: sans-serif;
     padding-top: 5rem;
 }
 
-.main{
+.main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -16,7 +16,7 @@ body{
 }
 
 // Navbar styles
-.navbar{
+.navbar {
     padding: 1rem 1rem 0rem 1rem;
     background-color: white;
     position: fixed;
@@ -25,32 +25,32 @@ body{
     z-index: 99;
     width: calc(100vw - 2rem);
 
-    nav{
+    nav {
         display: flex;
         justify-content: space-between;
         align-items: center;
         border: 2px solid black;
         padding: 1rem;
-    
-        .logo{
+
+        .logo {
             font-weight: bold;
             font-size: 1.5rem;
 
-            a{
+            a {
                 color: black;
                 text-decoration: none;
             }
         }
-    
-        .items{
+
+        .items {
             display: flex;
             gap: 1rem;
-    
-            a{
+
+            a {
                 color: black;
                 text-decoration: none;
-    
-                &:hover{
+
+                &:hover {
                     text-decoration: underline double;
                 }
             }
@@ -59,34 +59,34 @@ body{
 }
 
 // main blog styles
-.container{
+.container {
     display: flex;
     justify-content: center;
 
-    .blog{
+    .blog {
         width: 100%;
         max-width: 600px;
         margin-top: 2rem;
         padding: 1rem;
 
         // home page style
-        .posts{
+        .posts {
             margin-top: 2rem;
 
-            .post_item{
+            .post_item {
                 margin-bottom: 1.5rem;
 
-                .title{
+                .title {
                     font-size: 2rem;
                     text-decoration: none;
                     color: black;
 
-                    &:hover{
+                    &:hover {
                         text-decoration: underline;
                     }
                 }
 
-                .date{
+                .date {
                     margin-top: 0.5rem;
                     opacity: 0.6;
                 }
@@ -94,55 +94,55 @@ body{
         }
 
         // blog page styles
-        h1.title{
+        h1.title {
             font-size: 3rem;
         }
 
-        p.date{
+        p.date {
             margin-top: 0.5rem;
             opacity: 0.6;
         }
 
-        .content{
+        .content {
             margin-top: 2rem;
 
-            *{
+            * {
                 line-height: 150%;
                 font-size: 1.1rem;
             }
 
-            details{
+            details {
                 margin-bottom: 1rem;
-    
-                summary{
+
+                summary {
                     cursor: pointer;
-    
-                    &:hover{
+
+                    &:hover {
                         text-decoration: double underline;
                     }
                 }
-    
-                ol{
+
+                ol {
                     margin: 0.5rem 0 0 2rem;
-    
-                    li{
+
+                    li {
                         margin-bottom: 0.2rem;
                     }
                 }
             }
 
-            .blog_content{
+            .blog_content {
                 display: flex;
                 flex-direction: column;
                 // gap: 1rem;
             }
 
             // Styles for elements
-            a{
+            a {
                 color: #180ea4;
                 text-decoration: none;
 
-                &:hover{
+                &:hover {
                     text-decoration: underline;
                 }
 
@@ -151,19 +151,19 @@ body{
                 }
             }
 
-            p{
+            p {
                 margin-bottom: 1rem;
             }
 
-            h2{
+            h2 {
                 font-size: 1.5rem;
             }
 
-            h1{
+            h1 {
                 font-size: 2rem;
             }
 
-            img{
+            img {
                 width: 100%;
             }
 
@@ -174,53 +174,54 @@ body{
                 margin-bottom: 1rem;
             }
 
-            ul, ol{
+            ul,
+            ol {
                 padding-left: 1.1rem;
 
-                li{
+                li {
                     margin-bottom: 0.5rem;
                 }
             }
 
-            em{
+            em {
                 text-decoration: underline;
             }
 
-            abbr{
+            abbr {
                 cursor: context-menu;
             }
 
-            table{
+            table {
                 border: 2px solid black;
                 border-collapse: collapse;
                 margin-bottom: 1rem;
 
-                *{
+                * {
                     font-size: 1rem;
                 }
 
-                th{
+                th {
                     text-align: left;
                     font-weight: bold;
                     padding: 0.5rem;
                     border-bottom: 1px solid black;
                     background: #f5f5f5;
                 }
-                
-                td{
+
+                td {
                     padding: 0.5rem;
                 }
 
-                tr{
-                    &:hover{
+                tr {
+                    &:hover {
                         background: #f5f5f5;
                     }
                 }
 
-                tr.emphasize{
+                tr.emphasize {
                     background: #abf5c1;
 
-                    td{
+                    td {
                         font-weight: bold;
                     }
                 }
@@ -229,7 +230,7 @@ body{
     }
 }
 
-.footer{
+.footer {
     background: #f5f5f5;
     display: flex;
     justify-content: space-between;
@@ -237,24 +238,24 @@ body{
     margin-top: 5rem;
     border-top: 2px solid black;
 
-    .logo{
+    .logo {
         color: black;
         font-size: 1.5rem;
         font-weight: bold;
         text-decoration: none;
     }
 
-    .links{
+    .links {
         display: flex;
         flex-direction: column;
         align-items: flex-end;
         gap: 0.5rem;
 
-        a{
+        a {
             color: black;
             text-decoration: none;
 
-            &:hover{
+            &:hover {
                 text-decoration: underline double;
             }
         }
@@ -263,19 +264,19 @@ body{
 
 // mobile styes
 @media screen and (max-width: 800px) {
-    .navbar{
-        nav{
-            .items{
+    .navbar {
+        nav {
+            .items {
                 display: none;
             }
         }
     }
 
-    .footer{
+    .footer {
         flex-direction: column;
         gap: 2rem;
 
-        .links{
+        .links {
             align-items: flex-start;
         }
     }

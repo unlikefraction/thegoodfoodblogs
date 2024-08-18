@@ -17,4 +17,17 @@ document.addEventListener("DOMContentLoaded", function() {
             link.innerHTML += ' 🔗';
         }
     });
+
+    // Select the blog content to search for paired parentheses
+    const blogContent = document.querySelector('.blog_content');
+
+    // Function to wrap paired parentheses in a span with the class "faded"
+    function wrapParentheses(content) {
+        return content.replace(/\(([^)]+)\)/g, '<span class="faded">($1)</span>');
+    }
+
+    // If blogContent exists, wrap the paired parentheses
+    if (blogContent) {
+        blogContent.innerHTML = wrapParentheses(blogContent.innerHTML);
+    }
 });

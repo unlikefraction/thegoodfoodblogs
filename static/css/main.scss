@@ -146,6 +146,22 @@ body {
         margin-top: 1rem;
         padding: 1rem;
 
+        .title{
+            color: #1D1D1F;
+            font-weight: 400;
+            font-size: 2.2rem;
+            margin-top: 2rem;
+        }
+
+        .dateContainer{
+            display: flex;
+            margin-top: 2rem;
+            .date{
+                font-weight: 600;
+                color: #6E6E73;
+            }
+        }
+
         // Posts section
         .posts {
             margin-top: 2rem;
@@ -212,6 +228,12 @@ body {
             .blog_content {
                 display: flex;
                 flex-direction: column;
+                h3{
+                    font-weight: 600;
+                    color: #363636;
+                    margin-bottom: 0.6rem;
+                    margin-top: 0.6rem;
+                }
             }
 
             a {

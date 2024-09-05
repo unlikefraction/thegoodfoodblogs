@@ -129,6 +129,20 @@ body {
   margin-top: 1rem;
   padding: 1rem;
 }
+.container .blog .title {
+  color: #1D1D1F;
+  font-weight: 400;
+  font-size: 2.2rem;
+  margin-top: 2rem;
+}
+.container .blog .dateContainer {
+  display: flex;
+  margin-top: 2rem;
+}
+.container .blog .dateContainer .date {
+  font-weight: 600;
+  color: #6E6E73;
+}
 .container .blog .posts {
   margin-top: 2rem;
 }
@@ -182,6 +196,12 @@ body {
 .container .blog .content .blog_content {
   display: flex;
   flex-direction: column;
+}
+.container .blog .content .blog_content h3 {
+  font-weight: 600;
+  color: #363636;
+  margin-bottom: 0.6rem;
+  margin-top: 0.6rem;
 }
 .container .blog .content a {
   color: #180ea4;

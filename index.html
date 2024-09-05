@@ -61,12 +61,12 @@
         <img class="heroText" src="../static/images/heroText.svg" alt="the good food blog">
         <img class="heroTextMob" src="../static/images/heroTextMob.svg" alt="the good food blog">
     </div>
-
+    
     <div class="main">
         <div class="container">
             <div class="blog">
                 <h1 class="title"></h1>
-    
+                
                 
         
                 
@@ -132,6 +132,13 @@
     <script defer src="/static/script.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
+            const heroContainer = document.querySelector(".heroContainer")
+
+            if (window.location.pathname !== "/") {
+                // If it's not the home page, hide the heroContainer
+                heroContainer.style.display = 'none';
+            }
+
             const menu = document.querySelector('.menu');
             const menuContent = document.querySelector('.menuContent');
             const hamIcon = document.getElementById('hamIcon');

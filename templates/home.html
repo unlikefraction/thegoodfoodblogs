@@ -7,8 +7,6 @@
 <meta name="keywords" content="home, blog, healthy food, health, lifestyle, healthy">
 {% endblock %}
 
-{% block blog_title %}The good food blogs{% endblock %}
-
 {% block hide_date %}{% endblock %}
 
 {% block blog %}
@@ -27,6 +25,7 @@
                 <a class="title" href="{{ post.url }}">{{ post.title }}</a>
                 <p class="date">{{ post.date }}</p>
             </div>
+            <div class="divider"></div>
         {% endfor %}
     </div>
 {% endblock %}

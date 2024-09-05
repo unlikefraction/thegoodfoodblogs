@@ -1,10 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 * {
   margin: 0;
   padding: 0;
 }
 
 body {
-  font-family: sans-serif;
+  font-family: "Inter", sans-serif;
   padding-top: 5rem;
 }
 
@@ -16,40 +17,106 @@ body {
 }
 
 .navbar {
-  padding: 1rem 1rem 0rem 1rem;
   background-color: white;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 99;
-  width: calc(100vw - 2rem);
+  width: 100%;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
 }
 .navbar nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 2px solid black;
-  padding: 1rem;
+  padding: 18px 40px;
+}
+.navbar nav .menu {
+  align-items: center;
+  justify-content: center;
+  display: none;
 }
 .navbar nav .logo {
+  display: flex;
+  align-items: center;
+  height: 42px;
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 36px;
 }
 .navbar nav .logo a {
-  color: black;
+  color: #f5f5f5;
+  background-image: url("../images/logoBg.png/");
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   text-decoration: none;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: black;
 }
 .navbar nav .items {
   display: flex;
-  gap: 1rem;
+  gap: 10px;
+  align-items: center;
 }
 .navbar nav .items a {
-  color: black;
+  color: rgba(0, 0, 0, 0.75);
+  font-size: 18px;
+  font-weight: 400;
   text-decoration: none;
 }
 .navbar nav .items a:hover {
   -webkit-text-decoration: underline double;
           text-decoration: underline double;
+}
+.navbar nav .items .dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.5);
+}
+.navbar .menuContent {
+  display: none;
+  padding: 2px 20px;
+  padding-bottom: 16px;
+}
+.navbar .menuContent .items {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.navbar .menuContent .items a {
+  color: rgba(0, 0, 0, 0.75);
+  font-size: 18px;
+  font-weight: 400;
+  text-decoration: none;
+}
+.navbar .menuContent .items a:hover {
+  -webkit-text-decoration: underline double;
+          text-decoration: underline double;
+}
+.navbar .menuContent .items .dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.heroContainer {
+  position: relative;
+  width: 100%;
+}
+.heroContainer .heroBg {
+  width: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+.heroContainer .heroText {
+  position: absolute;
+  bottom: 25px;
+  left: 41px;
+}
+.heroContainer .heroTextMob {
+  display: none;
 }
 
 .container {
@@ -58,34 +125,36 @@ body {
 }
 .container .blog {
   width: 100%;
-  max-width: 600px;
-  margin-top: 2rem;
+  max-width: 800px;
+  margin-top: 1rem;
   padding: 1rem;
 }
 .container .blog .posts {
   margin-top: 2rem;
 }
+.container .blog .posts .divider {
+  height: 1px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+}
 .container .blog .posts .post_item {
   margin-bottom: 1.5rem;
 }
 .container .blog .posts .post_item .title {
-  font-size: 2rem;
+  font-size: 2.2rem;
   text-decoration: none;
-  color: black;
+  color: #2C2C2C;
+  font-weight: 300;
 }
 .container .blog .posts .post_item .title:hover {
   text-decoration: underline;
 }
 .container .blog .posts .post_item .date {
   margin-top: 0.5rem;
-  opacity: 0.6;
-}
-.container .blog h1.title {
-  font-size: 3rem;
-}
-.container .blog p.date {
-  margin-top: 0.5rem;
-  opacity: 0.6;
+  opacity: 0.5;
+  font-weight: 400;
+  font-size: 1.2rem;
 }
 .container .blog .content {
   margin-top: 2rem;
@@ -127,19 +196,14 @@ body {
 .container .blog .content p {
   margin-bottom: 1rem;
 }
-.container .blog .content h2 {
-  font-size: 1.5rem;
-}
 .container .blog .content h1 {
   font-size: 2rem;
 }
+.container .blog .content h2 {
+  font-size: 1.5rem;
+}
 .container .blog .content img {
   width: 100%;
-}
-.container .blog .content img:has(+ p),
-.container .blog .content img:has(+ h1),
-.container .blog .content img:has(+ h2),
-.container .blog .content img:has(+ h3) {
   margin-bottom: 1rem;
 }
 .container .blog .content ul,
@@ -188,12 +252,14 @@ body {
 }
 
 .footer {
-  background: #f5f5f5;
+  background: #FEFFFA;
   display: flex;
   justify-content: space-between;
-  padding: 2rem;
-  margin-top: 5rem;
-  border-top: 2px solid black;
+  align-items: center;
+  border-top: 1px solid #E0DBC7;
+}
+.footer .madeIn {
+  display: none;
 }
 .footer .logo {
   color: black;
@@ -216,15 +282,88 @@ body {
           text-decoration: underline double;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1350px) {
+  .heroText {
+    width: 30rem;
+  }
+}
+@media screen and (max-width: 950px) {
+  .heroText {
+    bottom: 20px !important;
+    left: 20px !important;
+    width: 20rem;
+  }
+  .navbar nav {
+    padding: 18px 20px;
+  }
+}
+@media screen and (max-width: 620px) {
+  .heroText {
+    display: none;
+  }
+  nav a {
+    font-size: 2rem;
+  }
+  .container .blog .posts .post_item .title {
+    font-size: 1.6rem;
+  }
+  .container .blog .posts .post_item .date {
+    font-size: 1.1rem;
+  }
+  .heroTextMob {
+    display: flex !important;
+    position: absolute;
+    bottom: 15px;
+    width: 12rem;
+    left: 15px;
+  }
+  .navbar nav {
+    padding: 18px 20px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .heroTextMob {
+    width: 8rem;
+  }
+  nav a {
+    font-size: 1.4rem;
+  }
+  .container .blog .posts .post_item .title {
+    font-size: 1.4rem;
+    font-weight: 400;
+  }
+  .container .blog .posts .post_item .date {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 850px) {
+  .navbar nav .menu {
+    display: flex;
+    cursor: pointer;
+  }
   .navbar nav .items {
     display: none;
   }
   .footer {
+    padding: 20px;
     flex-direction: column;
-    gap: 2rem;
+    gap: 0.5rem;
   }
-  .footer .links {
-    align-items: flex-start;
+  .footer .flower {
+    display: none;
+  }
+  .footer .madeIn {
+    font-size: 14px;
+    color: #959693;
+    font-weight: 400;
+    display: block;
+  }
+}
+@media screen and (max-width: 340px) {
+  .navbar nav {
+    justify-content: end;
+  }
+  .navbar nav .logo {
+    display: none;
   }
 }/*# sourceMappingURL=main.css.map */

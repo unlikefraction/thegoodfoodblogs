@@ -16,7 +16,7 @@ def render_static_page(page):
     output = template.render()
     
     output_path = os.path.join('output', page)
-    with open(output_path, 'w') as f:
+    with open(output_path, 'w', encoding='utf-8') as f:
         f.write(output)
     print(f"Rendered {output_path}")
 
@@ -26,7 +26,7 @@ def render_blog_post(post):
     output = template.render()
     
     output_path = os.path.join('output', f'{post_filename}.html')
-    with open(output_path, 'w') as f:
+    with open(output_path, 'w', encoding='utf-8') as f:
         f.write(output)
     print(f"Rendered {output_path}")
 
@@ -40,7 +40,7 @@ def render_home(posts):
     template = env.get_template('home.html')
     output = template.render(posts=posts)
     output_path = os.path.join('output', 'index.html')
-    with open(output_path, 'w') as f:
+    with open(output_path, 'w', encoding='utf-8') as f:
         f.write(output)
     print(f"Rendered {output_path}")
 
@@ -89,7 +89,7 @@ def generate_sitemap(pages, posts):
     {''.join(sitemap_entries)}
 </urlset>"""
 
-    with open('output/sitemap.xml', 'w') as f:
+    with open('output/sitemap.xml', 'w', encoding='utf-8') as f:
         f.write(sitemap_content)
     print("Generated sitemap.xml")
 
@@ -107,7 +107,7 @@ def render_all():
             post_path = os.path.join('blog_posts', post)
             render_blog_post(post_path)
             
-            with open(post_path, 'r') as f:
+            with open(post_path, 'r', encoding='utf-8') as f:
                 content = f.read()
                 title, date = extract_post_metadata(content)
                 post_filename = os.path.splitext(post)[0]
@@ -116,7 +116,7 @@ def render_all():
                     posts.append({
                         'url': f'{post_filename}.html',
                         'title': title,
-                        'date': date.strftime('%Y-%m-%d')
+                        'date': date.strftime('%d %B %Y')
                     })
 
     posts = sorted(posts, key=lambda x: x['date'], reverse=True)
